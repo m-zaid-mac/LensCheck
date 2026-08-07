@@ -1,11 +1,5 @@
-//
-//  LensCheckApp.swift
-//  LensCheck
-//
-//  Created by Mohammad Zaid on 06/08/26.
-//
-
 import SwiftUI
+import SwiftData
 
 @main
 struct LensCheckApp: App {
@@ -13,5 +7,6 @@ struct LensCheckApp: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: QualityResult.self)
     }
 }

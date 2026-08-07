@@ -6,8 +6,19 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		A9C37787302567D300A52FAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9C377513025612C00A52FAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A9C377583025612C00A52FAF;
+			remoteInfo = LensCheck;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		A9C377593025612C00A52FAF /* LensCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LensCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9C37783302567D300A52FAF /* LensCheckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LensCheckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -16,10 +27,22 @@
 			path = LensCheck;
 			sourceTree = "<group>";
 		};
+		A9C37784302567D300A52FAF /* LensCheckTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = LensCheckTests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A9C377563025612C00A52FAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9C37780302567D300A52FAF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				A9C3775B3025612C00A52FAF /* LensCheck */,
+				A9C37784302567D300A52FAF /* LensCheckTests */,
 				A9C3775A3025612C00A52FAF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				A9C377593025612C00A52FAF /* LensCheck.app */,
+				A9C37783302567D300A52FAF /* LensCheckTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +95,29 @@
 			productReference = A9C377593025612C00A52FAF /* LensCheck.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A9C37782302567D300A52FAF /* LensCheckTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9C37789302567D300A52FAF /* Build configuration list for PBXNativeTarget "LensCheckTests" */;
+			buildPhases = (
+				A9C3777F302567D300A52FAF /* Sources */,
+				A9C37780302567D300A52FAF /* Frameworks */,
+				A9C37781302567D300A52FAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A9C37788302567D300A52FAF /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				A9C37784302567D300A52FAF /* LensCheckTests */,
+			);
+			name = LensCheckTests;
+			packageProductDependencies = (
+			);
+			productName = LensCheckTests;
+			productReference = A9C37783302567D300A52FAF /* LensCheckTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -82,6 +130,10 @@
 				TargetAttributes = {
 					A9C377583025612C00A52FAF = {
 						CreatedOnToolsVersion = 26.6;
+					};
+					A9C37782302567D300A52FAF = {
+						CreatedOnToolsVersion = 26.6;
+						TestTargetID = A9C377583025612C00A52FAF;
 					};
 				};
 			};
@@ -100,12 +152,20 @@
 			projectRoot = "";
 			targets = (
 				A9C377583025612C00A52FAF /* LensCheck */,
+				A9C37782302567D300A52FAF /* LensCheckTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A9C377573025612C00A52FAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9C37781302567D300A52FAF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +182,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A9C3777F302567D300A52FAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A9C37788302567D300A52FAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A9C377583025612C00A52FAF /* LensCheck */;
+			targetProxy = A9C37787302567D300A52FAF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		A9C377623025612E00A52FAF /* Debug */ = {
@@ -306,6 +381,46 @@
 			};
 			name = Release;
 		};
+		A9C3778A302567D300A52FAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mdz.LensCheck.LensCheckTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LensCheck.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LensCheck";
+			};
+			name = Debug;
+		};
+		A9C3778B302567D300A52FAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mdz.LensCheck.LensCheckTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LensCheck.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LensCheck";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -323,6 +438,15 @@
 			buildConfigurations = (
 				A9C377653025612E00A52FAF /* Debug */,
 				A9C377663025612E00A52FAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9C37789302567D300A52FAF /* Build configuration list for PBXNativeTarget "LensCheckTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9C3778A302567D300A52FAF /* Debug */,
+				A9C3778B302567D300A52FAF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
