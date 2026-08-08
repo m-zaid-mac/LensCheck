@@ -73,7 +73,7 @@ Unit tests in `LensCheckTests/HeuristicQualityAnalyzerTests.swift` cover the ana
 
 ## Roadmap
 
-- - ~~Core ML v2~~ — **shipped.** A MobileNetV3-based model, trained on a synthetically-degraded dataset from personal photos, now powers on-   device scoring via Vision. See `lenscheck-ml/` for the training pipeline.
+-  ~~Core ML v2~~ — **shipped.** A MobileNetV3-based model, trained on a synthetically-degraded dataset from personal photos, now powers on-   device scoring via Vision. See `lenscheck-ml/` for the training pipeline.
 - **Camera capture** — shoot photos directly instead of only picking from the library
 - **Score trends over time** — Swift Charts view showing quality scores across a photo library or shooting session
 - **Video support** — extend scoring to frames sampled from video, tying back into the desktop video-quality-assessment project this one pairs with
