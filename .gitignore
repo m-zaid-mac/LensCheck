@@ -1,0 +1,14 @@
+.DS_Store
+*.xcuserstate
+xcuserdata/
+DerivedData/
+.build/
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
+
+# Python ML pipeline
+lenscheck-ml/venv/
+lenscheck-ml/dataset/
+lenscheck-ml/__pycache__/
+lenscheck-ml/*.pyc
