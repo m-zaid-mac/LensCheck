@@ -67,7 +67,40 @@ open LensCheck.xcodeproj
 
 Pick a simulator, press ⌘R. Drag any photo from Finder onto the running simulator window to add it to the simulator's Photos app, then tap **Choose Photo** in LensCheck.
 
-To retrain or regenerate the Core ML model yourself, see `lenscheck-ml/PIPELINE.md`.
+## Training the Core ML model yourself
+
+The repo includes the trained model already (`lenscheck-ml/LensCheckQuality.mlpackage`), so this isn't required to run the app — it's here if you want to retrain on your own photos or understand how the model was produced.
+
+```bash
+cd lenscheck-ml
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+
+**1. Generate a synthetic labeled dataset** from a folder of your own clean, sharp, well-exposed photos — this synthetically blurs/exposure-shifts copies by known amounts and uses those known amounts as ground-truth labels:
+
+```bash
+python3 generate_dataset.py --input path/to/your/photos --output dataset --variants 8
+```
+
+**2. Train the model** (a MobileNetV3-Small backbone with a small regression head):
+
+```bash
+python3 train_model.py --data dataset --epochs 15 --output quality_model_traced.pt
+```
+
+Watch `val_loss` trend downward across epochs — that's the signal training is actually working.
+
+**3. Convert to Core ML:**
+
+```bash
+python3 convert_to_coreml.py --model quality_model_traced.pt --output LensCheckQuality.mlpackage
+```
+
+**4. Bring it into Xcode:** drag the resulting `.mlpackage` into the project (target: LensCheck), build once (⌘B) so Xcode generates the `LensCheckQuality` Swift class, then point `QualityViewModel`'s default analyzer at `CoreMLQualityAnalyzer()` instead of `HeuristicQualityAnalyzer()`.
+
+Full step-by-step detail, plus a troubleshooting section for common errors at each stage, lives in `lenscheck-ml/PIPELINE.md`.
 
 ## Testing
 
@@ -93,4 +126,3 @@ Unit tests in `LensCheckTests/HeuristicQualityAnalyzerTests.swift` cover the heu
 - GitHub: [@m-zaid-mac](https://github.com/m-zaid-mac)
 - LinkedIn: [mohammad-zaid](https://www.linkedin.com/in/mohammad-zaid-6a360b276/)
 - Email: zaid.m@northeastern.edu
-
