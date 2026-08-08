@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		A9C3779330256F5000A52FAF /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A9C3779230256F5000A52FAF /* README.md */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		A9C37787302567D300A52FAF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -19,6 +23,7 @@
 /* Begin PBXFileReference section */
 		A9C377593025612C00A52FAF /* LensCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LensCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9C37783302567D300A52FAF /* LensCheckTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LensCheckTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9C3779230256F5000A52FAF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -55,6 +60,7 @@
 		A9C377503025612C00A52FAF = {
 			isa = PBXGroup;
 			children = (
+				A9C3779230256F5000A52FAF /* README.md */,
 				A9C3775B3025612C00A52FAF /* LensCheck */,
 				A9C37784302567D300A52FAF /* LensCheckTests */,
 				A9C3775A3025612C00A52FAF /* Products */,
@@ -162,6 +168,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9C3779330256F5000A52FAF /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

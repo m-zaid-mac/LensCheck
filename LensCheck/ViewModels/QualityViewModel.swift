@@ -15,7 +15,7 @@ final class QualityViewModel {
 
     // Swap HeuristicQualityAnalyzer() for CoreMLQualityAnalyzer() here
     // once the v2 model is ready — nothing else in the app changes.
-    init(analyzer: QualityAnalyzing = HeuristicQualityAnalyzer()) {
+    init(analyzer: QualityAnalyzing = CoreMLQualityAnalyzer()) {
         self.analyzer = analyzer
     }
 
